@@ -431,6 +431,9 @@
             color: white;
             margin: 0 10px;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .footer-links a:hover {
@@ -441,6 +444,58 @@
             margin-top: 20px;
             font-size: 0.9rem;
             color: #aaa;
+        }
+        
+        /* 説明会バナー */
+        .seminar-banner {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px auto;
+            max-width: 650px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #FF9800;
+        }
+        
+        .seminar-date {
+            font-weight: bold;
+            color: #FF5722;
+            font-size: 2rem;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .free-label {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 5px auto 10px;
+            font-size: 1.3rem;
+            text-align: center;
+            width: auto;
+            min-width: 200px;
+        }
+        
+        /* キャンペーンバナー */
+        .campaign-banner {
+            background: #FF5722;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .free-highlight {
+            font-size: 1.6rem;
+            background: yellow;
+            color: #FF5722;
+            padding: 0 8px;
+            font-weight: bold;
         }
         
         /* レスポンシブデザイン */
@@ -486,6 +541,19 @@
             .hero {
                 padding: 120px 0 60px;
             }
+            
+            .seminar-date {
+                font-size: 1.5rem;
+            }
+            
+            .free-label {
+                font-size: 1.1rem;
+                padding: 6px 15px;
+            }
+            
+            .free-highlight {
+                font-size: 1.3rem;
+            }
         }
         
         /* タブレット向けスタイル */
@@ -509,6 +577,15 @@
         <div class="container">
             <div class="subtitle">「<span class="highlight">日本一ゆるい</span>」副業・起業サポートコミュニティ</div>
             <h1 class="main-title">Bizシード説明会</h1>
+            
+            <!-- 説明会情報を目立つバナーとして追加 -->
+            <div class="seminar-banner">
+                <p style="font-weight: bold; color: #333; font-size: 1.5rem; margin-bottom: 5px; text-align: center;">次回説明会</p>
+                <p class="seminar-date">6/18（水）21:00～22:00</p>
+                <div class="free-label">参加費: 無料</div>
+                <p style="font-size: 0.9rem; margin: 5px 0 0; text-align: center;">※参加できない方にも視聴用動画を配布します</p>
+            </div>
+            
             <h2>本業の不安、やりたいことへの迷い、全部解決。<br>Bizシードで無理なく副業・起業を実現</h2>
             <a href="https://lifeconnect.hp.peraichi.com/Bizseed-setsumeikai" class="cta-button" target="_blank">無料説明会に参加する</a>
         </div>
@@ -656,7 +733,15 @@
             <h2 class="section-title">Bizシード説明会（60分間／月１回）</h2>
             <div class="seminar-details">
                 <h3>説明会では、オンラインコミュニティ「ライフコネクト」のサービス「Bizシード」について詳しくご案内します。</h3>
-                <p><strong>開催日時:</strong> 毎月第3週の平日夜</p>
+                
+                <!-- 次回説明会情報をより目立つように修正 -->
+                <div style="background: #FFF3E0; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 5px solid #FF9800;">
+                    <p style="font-weight: bold; margin-bottom: 5px;">【次回説明会日時】</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 5px;">6月18日（水）21:00～22:00</p>
+                    <p style="color: #FF5722; font-weight: bold; margin-bottom: 5px;">参加費: 無料</p>
+                    <p style="font-size: 0.9rem;">※リアルタイムで参加できない方や説明会開催日以降に情報を知った方で、ご希望の方には視聴用動画を配布いたします。</p>
+                </div>
+                
                 <p><strong>場所:</strong> オンライン（ZOOM）</p>
                 <p><strong>所要時間:</strong> 60分間</p>
                 
@@ -753,9 +838,20 @@
             <h2><span class="highlight">日本一ゆるく</span> 副業・起業への一歩を踏み出しませんか？</h2>
             <p>Bizシードの説明会で、あなたの「やりたいこと」を仕事にする方法を知ることができます。</p>
             
-            <div class="campaign-note">【期間限定】8/25までのお申込みで入会費10,000円が無料に！</div>
+            <!-- 次回説明会情報を追加 -->
+            <div style="background: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 10px; margin: 10px auto 20px; max-width: 500px;">
+                <p style="font-weight: bold; color: #FF5722; font-size: 1.1rem; margin-bottom: 5px;">【次回説明会】6/18（水）21:00～22:00</p>
+                <p style="font-weight: bold; margin-bottom: 5px;">参加費: 無料</p>
+                <p style="font-size: 0.9rem; margin-bottom: 0;">※参加できない方にも視聴用動画を配布します</p>
+            </div>
             
-            <a href="https://lifeconnect.hp.peraichi.com/Bizseed-setsumeikai" class="cta-button" target="_blank">無料説明会に申し込む</a>
+            <!-- キャンペーン情報を目立たせる -->
+            <div class="campaign-banner">
+                <p style="font-weight: bold; font-size: 1.3rem; margin: 0;">【期間限定】8/25までのお申込みで<br>入会費10,000円が<span class="free-highlight">無料</span>に！</p>
+            </div>
+            
+            <!-- ボタンの位置を調整 -->
+            <a href="https://lifeconnect.hp.peraichi.com/Bizseed-setsumeikai" class="cta-button" target="_blank" style="margin-bottom: 30px;">無料説明会に申し込む</a>
             
             <div class="price-tag">
                 <span class="price-highlight">月額たった4,980円</span>で、副業・起業の夢を現実に
@@ -766,8 +862,6 @@
                 <li>作業中の疑問点を常駐スタッフに気軽に相談できる</li>
                 <li>高額な起業塾と違い、気軽に始められる安心感</li>
             </ul>
-            
-            <p class="seminar-note">※説明会は毎月第3週の平日夜に開催、所要時間は60分です</p>
         </div>
     </section>
     
@@ -775,9 +869,13 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="#">お問い合わせ</a>
-                <a href="#">プライバシーポリシー</a>
-                <a href="#">利用規約</a>
+                <a href="mailto:my.expert.08@gmail.com" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    お問い合わせ: my.expert.08@gmail.com
+                </a>
             </div>
             <div class="copyright">Copyright © 2025 ライフコネクト</div>
         </div>
