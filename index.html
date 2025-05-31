@@ -286,6 +286,28 @@
             font-weight: bold;
         }
         
+        /* 各プログラムの魅力セクション */
+        .program-features {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .program-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .program-title {
+            color: #4CAF50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
         /* 説明会概要 */
         .seminar-info {
             background-color: #FFFFFF;
@@ -327,6 +349,104 @@
             left: 0;
             font-weight: bold;
             font-size: 20px;
+        }
+        
+        /* メンバー紹介セクション */
+        .members {
+            background-color: #F5F5F5;
+            padding: 80px 0;
+        }
+        
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+        }
+        
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .member-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 30px auto 20px;
+            border: 3px solid #4CAF50;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        .member-title {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .member-bio {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .staff-card {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .staff-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .staff-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        .staff-title {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
         }
         
         /* FAQ セクション */
@@ -417,6 +537,69 @@
             font-size: 0.9rem;
             color: #777;
             margin-top: 20px;
+        }
+        
+        /* お問い合わせセクション */
+        .contact {
+            background-color: #F5F5F5;
+            padding: 80px 0;
+        }
+        
+        .contact-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .contact-text {
+            margin-bottom: 30px;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .contact-button:hover {
+            background-color: #3e8e41;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .contact-email {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #555;
+        }
+        
+        .contact-email svg {
+            color: #4CAF50;
+        }
+        
+        .contact-email a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-email a:hover {
+            text-decoration: underline;
         }
         
         /* フッター */
@@ -525,7 +708,7 @@
                 font-size: 1rem;
             }
             
-            .benefits-grid {
+            .benefits-grid, .members-grid, .staff-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -554,11 +737,15 @@
             .free-highlight {
                 font-size: 1.3rem;
             }
+            
+            .contact-box {
+                padding: 20px;
+            }
         }
         
         /* タブレット向けスタイル */
         @media (min-width: 769px) and (max-width: 1024px) {
-            .benefits-grid {
+            .benefits-grid, .members-grid, .staff-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -608,7 +795,7 @@
     <!-- ソリューションセクション -->
     <section class="solution" id="solution">
         <div class="container">
-            <h2 class="section-title">副業・起業への第一歩は、「<span class="highlight">日本一ゆるい</span>」Bizシードから</h2>
+            <h2 class="section-title">副業・起業への第一歩は、「<span class="highlight">日本一ゆるい起業コミュニティ</span>」Bizシードから</h2>
             <div class="solution-content">
                 <p>ライフコネクトが提供する「Bizシード」は、副業や起業に興味はあるけれど、大きなリスクを取りたくない方のためのオンラインコミュニティです。</p>
                 <br>
@@ -625,7 +812,7 @@
             <ul class="cost-list">
                 <li>
                     <strong>セミナー価値で考えると</strong>
-                    一般的なビジネスセミナー1回3,000円と考えると、月に課題シェア会と勉強会の2回だけでも元が取れます。さらに作業会2回も含めると、圧倒的なコスパを実現。
+                    一般的なビジネスセミナー1回3,000円と考えると、課題シェア会と勉強会の2回だけでも元が取れます。さらに作業会2回も含めると、圧倒的なコスパを実現。
                 </li>
                 <li>
                     <strong>挫折リスクの軽減</strong>
@@ -688,12 +875,12 @@
             <h2 class="section-title">Bizシードのサービス内容</h2>
             <p class="text-center" style="margin-bottom: 40px;">週1回（2時間）、一ヶ月1クールの起業塾をオンラインで開催。参加者同士で課題を共有し、ビジネスについて共に学び、各自で作業を進めることができます。</p>
             
-            <h3 class="text-center" style="margin-bottom: 30px;">基本スケジュール（月額4,980円で参加できる4回のセッション）</h3>
+            <h3 class="text-center" style="margin-bottom: 30px;">毎月のスケジュール（一ヶ月１クール／月額4,980円（税込））</h3>
             <table class="schedule-table">
                 <tr>
                     <th>週</th>
+                    <th>プログラム</th>
                     <th>内容</th>
-                    <th>詳細</th>
                 </tr>
                 <tr>
                     <td>1週目</td>
@@ -717,13 +904,35 @@
                 </tr>
             </table>
             
-            <h3 class="text-center" style="margin-bottom: 30px;">作業会の魅力</h3>
-            <ul class="features-list">
-                <li>作業に集中できる時間・場を定期的に確保</li>
-                <li>仲間と一緒に取り組むことでモチベーション維持</li>
-                <li>わからないことがあれば、常駐する担当スタッフに気軽に相談・壁打ちができる</li>
-                <li>課題シェア会、勉強会は限定動画のリンク共有で追っかけ受講や振り返り受講できる</li>
-            </ul>
+            <!-- 各プログラムの魅力 - 新規追加部分 -->
+            <div class="program-features">
+                <div class="program-card">
+                    <h4 class="program-title">課題シェア会の魅力</h4>
+                    <ul class="features-list">
+                        <li>同じ志を持つ仲間と課題や悩みを共有できる</li>
+                        <li>他の参加者の経験から学び、自分のビジネスに活かせる</li>
+                        <li>一人で抱え込みがちな問題を解決する糸口を見つけられる</li>
+                    </ul>
+                </div>
+                
+                <div class="program-card">
+                    <h4 class="program-title">勉強会の魅力</h4>
+                    <ul class="features-list">
+                        <li>ビジネスの基礎から実践的なノウハウまで体系的に学べる</li>
+                        <li>副業・起業に必要な知識をコンパクトに習得できる</li>
+                        <li>実際に成功している事例を元に学ぶことができる</li>
+                    </ul>
+                </div>
+                
+                <div class="program-card">
+                    <h4 class="program-title">作業会の魅力</h4>
+                    <ul class="features-list">
+                        <li>作業に集中できる時間・場を定期的に確保</li>
+                        <li>仲間と一緒に取り組むことでモチベーション維持</li>
+                        <li>わからないことがあれば、常駐する担当スタッフに気軽に相談・壁打ちができる</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -752,6 +961,76 @@
                     <li>参加方法と費用</li>
                     <li>質疑応答</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- メンバー紹介セクション（新規追加） -->
+    <section class="members" id="members">
+        <div class="container">
+            <h2 class="section-title">主宰メンバー紹介</h2>
+            
+            <div class="members-grid">
+                <!-- 薄井信也さん -->
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="https://i.ibb.co/zh88Xpvw/image.jpg" alt="薄井信也">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">薄井信也</h3>
+                        <p class="member-title">肩書クリエイター<br>ブランディングコンサルタント</p>
+                        <p class="member-bio">企業やビジネスパーソンの強みを言語化し、魅力的な「肩書」として表現することで、ブランディングをサポート。多くの起業家の差別化戦略を成功に導いている。</p>
+                    </div>
+                </div>
+                
+                <!-- 成瀬敦史さん -->
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="https://i.ibb.co/1Jpg43tN/atsushi2.jpg" alt="成瀬敦史">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">成瀬敦史</h3>
+                        <p class="member-title">生きづらさ解放プレゼンター<br>（発達障害についての講演家）</p>
+                        <p class="member-bio">自身の発達障害の経験をもとに、「生きづらさ」を抱える人々のためのセミナーや講演を全国で展開。多くの人の人生に前向きな変化をもたらしている。</p>
+                    </div>
+                </div>
+                
+                <!-- 佐々川咲菜さん -->
+                <div class="member-card">
+                    <div class="member-photo">
+                        <img src="https://i.ibb.co/wFcks5rp/image.jpg" alt="佐々川咲菜">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">佐々川咲菜</h3>
+                        <p class="member-title">心理カウンセラー、自己受容マスター<br>自律神経調律師</p>
+                        <p class="member-bio">心と体のバランスを整えるアプローチで、多くのクライアントの自己受容と内面的な成長をサポート。独自の「調律メソッド」を開発し実践している。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-center" style="margin: 40px 0 30px;">運営メンバー</h3>
+            
+            <div class="staff-grid">
+                <!-- 運営メンバー1 - 小池真弓さん -->
+                <div class="staff-card">
+                    <h3 class="staff-name">小池真弓</h3>
+                    <p class="staff-title">愛を繋ぐ介護サポーター</p>
+                    <p>介護の現場で15年以上の経験を持ち、家族と介護者の関係構築をサポート。「愛と思いやり」を大切にした介護のあり方を提唱している。</p>
+                </div>
+                
+                <!-- 運営メンバー2 - 天元まさ音さん -->
+                <div class="staff-card">
+                    <h3 class="staff-name">天元まさ音</h3>
+                    <p class="staff-title">薬を勧めない薬剤師、中医学診断士<br>国際薬膳師、発酵マイスター</p>
+                    <p>東洋医学と西洋医学の知識を融合させ、食事や生活習慣からの健康づくりをアドバイス。特に発酵食品と薬膳に精通している。</p>
+                </div>
+                
+                <!-- 運営メンバー3 - 吉村瞳さん -->
+                <div class="staff-card">
+                    <h3 class="staff-name">吉村瞳</h3>
+                    <p class="staff-title">体質改善コーチ</p>
+                    <p>一人ひとりの体質や生活習慣に合わせたカスタマイズプログラムで、根本的な体質改善をサポート。多くのクライアントの健康と美容をサポートしている。</p>
+                </div>
             </div>
         </div>
     </section>
@@ -828,6 +1107,14 @@
                         <p>はい。各回のZOOMセッションは録画されますので、後からでも視聴可能です。課題シェア会と勉強会は限定動画のリンク共有で追っかけ受講や振り返り受講もできます。「日本一ゆるい」をコンセプトにしておりますので、無理なく続けられる設計になっています。</p>
                     </div>
                 </div>
+                
+                <!-- 新規追加質問 -->
+                <div class="faq-item">
+                    <div class="faq-question">Q: 休止や退会はいつでもできますか？</div>
+                    <div class="faq-answer">
+                        <p>はい、休止・退会は自由にお選びいただけます。毎月15日までに休止・退会の申し出をいただいた方は、当月で引き落としの処理を止め、退会処理当月までの利用となります。例えば6月15日までに申し出をいただいた場合、6月分の会費は既にお支払い済みのため、6月末日までご利用いただけ、7月分からの引き落としは行いません。「日本一ゆるい」コミュニティですので、ご自身のペースやライフスタイルに合わせて柔軟に調整していただけます。再開の場合は入会金は不要ですので、気軽に再開していただけます。</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -862,6 +1149,27 @@
                 <li>作業中の疑問点を常駐スタッフに気軽に相談できる</li>
                 <li>高額な起業塾と違い、気軽に始められる安心感</li>
             </ul>
+        </div>
+    </section>
+    
+    <!-- お問い合わせセクション（新規追加） -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-box">
+                <div class="contact-text">
+                    <p>Bizシードの活動や説明会についてのお問い合わせは、以下のフォームからお気軽にご連絡ください。</p>
+                </div>
+                <a href="https://lifeconnect.hp.peraichi.com/otoiawase" target="_blank" class="contact-button">お問い合わせフォームへ</a>
+                <div class="contact-email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>または直接メール：</span>
+                    <a href="mailto:my.expert.08@gmail.com">my.expert.08@gmail.com</a>
+                </div>
+            </div>
         </div>
     </section>
     
