@@ -435,17 +435,18 @@
             margin-bottom: 10px;
         }
         
-        .member-title {
+        .member-title, .staff-title {
             color: #666;
-            font-size: 1.1rem; /* フォントサイズを調整 */
+            font-size: 1.1rem;
             margin-bottom: 15px;
             line-height: 1.5;
         }
         
-        .member-bio {
-            font-size: 0.9rem;
+        .member-bio, .staff-card p {
+            font-size: 1rem;
             color: #555;
-            flex-grow: 1; /* 内容によって高さを調整 */
+            flex-grow: 1;
+            line-height: 1.6;
         }
         
         .staff-card {
@@ -465,17 +466,10 @@
         }
         
         .staff-name {
-            font-size: 1.2rem;
+            font-size: 1.3rem; /* メンバー名と統一 */
             font-weight: bold;
             color: #4CAF50;
             margin-bottom: 10px;
-        }
-        
-        .staff-title {
-            color: #666;
-            font-size: 1.1rem; /* 主宰メンバーと同じフォントサイズに変更 */
-            margin-bottom: 15px; /* マージンも主宰メンバーと統一 */
-            line-height: 1.5;
         }
         
         /* FAQ セクション */
@@ -774,6 +768,10 @@
             /* モバイルでのフォントサイズ調整 */
             .member-title, .staff-title {
                 font-size: 1rem;
+            }
+            
+            .member-bio, .staff-card p {
+                font-size: 0.95rem;
             }
         }
         
