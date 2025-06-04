@@ -70,6 +70,13 @@
             font-size: 24px;
             font-weight: bold;
             color: #4CAF50;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
         }
         
         /* ヒーローセクション */
@@ -77,6 +84,14 @@
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
             padding: 140px 0 80px;
             text-align: center;
+        }
+        
+        .hero-logo {
+            margin-bottom: 30px;
+        }
+        
+        .hero-logo img {
+            height: 80px;
         }
         
         .subtitle {
@@ -181,6 +196,37 @@
         .solution-content {
             max-width: 800px;
             margin: 0 auto;
+        }
+        
+        .solution-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .solution-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .solution-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .solution-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
         }
         
         /* 費用対効果セクション */
@@ -773,6 +819,10 @@
             .member-bio, .staff-card p {
                 font-size: 0.95rem;
             }
+            
+            .hero-logo img {
+                height: 60px;
+            }
         }
         
         /* タブレット向けスタイル */
@@ -787,13 +837,19 @@
     <!-- ヘッダー -->
     <header>
         <div class="container header-container">
-            <div class="logo">ライフコネクト</div>
+            <div class="logo">
+                <img src="https://i.ibb.co/JjTQ82Yd/1.png" alt="Bizシードロゴ">
+                ライフコネクト
+            </div>
         </div>
     </header>
     
     <!-- ヒーローセクション -->
     <section class="hero">
         <div class="container">
+            <div class="hero-logo">
+                <img src="https://i.ibb.co/JjTQ82Yd/1.png" alt="Bizシードロゴ">
+            </div>
             <div class="subtitle">「<span class="highlight">日本一ゆるい</span>」副業・起業サポートコミュニティ</div>
             <h1 class="main-title">Bizシード説明会</h1>
             
@@ -828,10 +884,17 @@
     <section class="solution" id="solution">
         <div class="container">
             <h2 class="section-title">副業・起業への第一歩は、「<span class="highlight">日本一ゆるい起業コミュニティ</span>」Bizシードから</h2>
-            <div class="solution-content">
-                <p>ライフコネクトが提供する「Bizシード」は、副業や起業に興味はあるけれど、大きなリスクを取りたくない方のためのオンラインコミュニティです。</p>
-                <br>
-                <p>4年間の実績を持つ私たちが、「日本一ゆるい」をコンセプトに、あなたの副業・起業の実現をサポート。無理な投資や覚悟を強いることなく、好きなこと、やりたいことで収入を得るための知識とスキルを身につけられます。</p>
+            
+            <div class="solution-flex">
+                <div class="solution-text">
+                    <p>ライフコネクトが提供する「Bizシード」は、副業や起業に興味はあるけれど、大きなリスクを取りたくない方のためのオンラインコミュニティです。</p>
+                    <br>
+                    <p>4年間の実績を持つ私たちが、「日本一ゆるい」をコンセプトに、あなたの副業・起業の実現をサポート。無理な投資や覚悟を強いることなく、好きなこと、やりたいことで収入を得るための知識とスキルを身につけられます。</p>
+                </div>
+                <div class="solution-image">
+                    <img src="https://i.ibb.co/76n7X1C/2.png" alt="オンラインで繋がる副業コミュニティ">
+                    <p class="image-caption">ご自宅からオンラインで気軽に参加できます</p>
+                </div>
             </div>
         </div>
     </section>
